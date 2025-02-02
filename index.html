@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Guess</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+
+</head>
+
+<body>
+
+    <h1 id="heading">TÆNK PÅ ET TAL OG COMPUTER VIL GÆTTE</h1>
+    <div class="game-container">
+        <div class="image-container">
+            <img src="assets/Monitor.svg" alt="Monitor">
+        </div>
+        <div class="input-container">
+
+            <button id="startButton">Start Game</button>
+            <div id="message"></div>
+        </div>
+        <div>
+            <button id="highButton" disabled>For høj</button>
+            <button id="lowButton" disabled>For Lav</button>
+            <button id="correctButton" disabled>Korrekt</button>
+        </div>
+    </div>
+    <div id="balloons" class="balloons-container">
+        <img src="assets/red.svg" class="balloon" alt="Balloon">
+        <img src="assets/Partyballoons.svg" class="balloon" alt="Balloon">
+        <img src="assets/red.svg" class="balloon" alt="Balloon">
+        <img src="assets/Partyballoons.svg" class="balloon" alt="Balloon">
+    </div>
+    <audio id="balloonSound" src="assets/popper.mp3"></audio>
+
+
+
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

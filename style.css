@@ -1,0 +1,169 @@
+/* Center everything and stack elements vertically */
+body {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #b4d5f1;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+
+/* Add spacing below the heading */
+#heading {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 25px; /* Adds space between h1 and the game */
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Game container */
+.game-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Image Styling */
+.image-container {
+  flex: 1;
+}
+
+.image-container img {
+  width: 250px; /* Adjust size */
+  max-width: 100%;
+}
+
+/* Input container */
+.input-container {
+  flex: 1;
+  text-align: center;
+}
+/* Buttons */
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+/* Start button */
+#startButton {
+  background-color: #28a745;
+}
+
+#startButton:hover {
+  background-color: #218838;
+}
+
+/* Guessing buttons */
+#highButton {
+  background-color: #dc3545;
+}
+
+#highButton:hover {
+  background-color: #c82333;
+}
+
+#lowButton {
+  background-color: #ffc107;
+  color: #333;
+}
+
+#lowButton:hover {
+  background-color: #e0a800;
+}
+
+#correctButton {
+  background-color: #007bff;
+}
+
+#correctButton:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled buttons */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Balloons Container - Ensures they are spaced apart */
+.balloons-container {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* Initially hidden */
+  width: 100%; /* Allows spacing */
+  text-align: center;
+}
+
+/* Individual Balloon Styling */
+.balloon {
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  animation: floatUp 5s ease-in-out forwards;
+}
+
+/* Random left positions so they don’t overlap */
+.balloon:nth-child(1) {
+  left: 20%;
+  animation-duration: 3.5s;
+}
+.balloon:nth-child(2) {
+  left: 40%;
+  animation-duration: 4s;
+}
+.balloon:nth-child(3) {
+  left: 60%;
+  animation-duration: 4.5s;
+}
+.balloon:nth-child(4) {
+  left: 80%;
+  animation-duration: 5s;
+}
+
+/* Floating animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0.8;
+  }
+}
+#balloons {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .game-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
